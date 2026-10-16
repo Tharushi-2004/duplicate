@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{7CF0EC34-3BAB-C3CF-9ADF-810BE74036C7}</ProjectGuid>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>ZELORAGUI</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\MySQL\MySQL Connector C++ 26.7\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mysqlcppconn.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\MySQL Connector C++ 26.7\lib64\Debug</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\MySQL\MySQL Connector C++ 26.7\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mysqlcppconn.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\MySQL Connector C++ 26.7\lib64\Debug</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutForm.cpp" />
+    <ClCompile Include="AppointmentForm.cpp" />
+    <ClCompile Include="BookAppointmentForm.cpp" />
+    <ClCompile Include="ContactForm.cpp" />
+    <ClCompile Include="CustomerForm.cpp" />
+    <ClCompile Include="DashboardForm.cpp" />
+    <ClCompile Include="GalleryForm.cpp" />
+    <ClCompile Include="HomeForm.cpp" />
+    <ClCompile Include="LoginForm.cpp" />
+    <ClCompile Include="program.cpp" />
+    <ClCompile Include="ServiceForm.cpp" />
+    <ClCompile Include="ServicesForm.cpp" />
+    <ClCompile Include="StaffForm.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AppointmentForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="BookAppointmentForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ContactForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="CustomerForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="DashboardForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="GalleryForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="HomeForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="LoginForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="program.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ServiceForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ServicesForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="StaffForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppointmentForm.resx">
+      <DependentUpon>AppointmentForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookAppointmentForm.resx">
+      <DependentUpon>BookAppointmentForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactForm.resx">
+      <DependentUpon>ContactForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardForm.resx">
+      <DependentUpon>DashboardForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GalleryForm.resx">
+      <DependentUpon>GalleryForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="program.resx">
+      <DependentUpon>program.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceForm.resx">
+      <DependentUpon>ServiceForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServicesForm.resx">
+      <DependentUpon>ServicesForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffForm.resx">
+      <DependentUpon>StaffForm.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
